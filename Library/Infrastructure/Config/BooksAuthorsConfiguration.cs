@@ -26,6 +26,40 @@ namespace Library.Infrastructure.Config
                 .WithMany(a => a.BooksAuthors)
                 .HasForeignKey(ba => ba.AuthorId);
 
+            builder
+                .HasData(
+                    new BooksAuthors
+                    {
+                        BookId = 1,
+                        AuthorId = 1
+                    },
+                    new BooksAuthors
+                    {
+                        BookId = 2,
+                        AuthorId = 1
+                    },
+                    new BooksAuthors
+                    {
+                        BookId = 3,
+                        AuthorId = 1
+                    },
+                    new BooksAuthors
+                    {
+                        BookId = 3,
+                        AuthorId = 2
+                    },
+                    new BooksAuthors
+                    {
+                        BookId = 4,
+                        AuthorId = 3
+                    },
+                    new BooksAuthors
+                    {
+                        BookId = 5,
+                        AuthorId = 3
+                    }
+                );
+
         }
     }
 }

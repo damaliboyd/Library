@@ -21,6 +21,38 @@ namespace Library.Infrastructure.Config
                 .HasOne(r => r.Book)
                 .WithMany(b => b.Reviews)
                 .IsRequired();
+
+            builder
+                .HasData(
+                    new Review
+                    {
+                        Id = 1,
+                        Text = "Boring!!!!",
+                        Reviewer = "Aaron Burr",
+                        BookId = 1,
+                    },
+                    new Review
+                    {
+                        Id = 2,
+                        Text = "This book was okay.",
+                        Reviewer = "Timult",
+                        BookId = 2,
+                    },
+                    new Review
+                    {
+                        Id = 3,
+                        Text = "Thoroughly enjoyed reading this book. Would totally read again every few years.",
+                        Reviewer = "BookReader101",
+                        BookId = 5,
+                    },
+                    new Review
+                    {
+                        Id = 4,
+                        Text = "5/5. Pretty Scary!!!!",
+                        Reviewer = "Jackson B.",
+                        BookId = 5,
+                    }
+                );
         }
     }
 }

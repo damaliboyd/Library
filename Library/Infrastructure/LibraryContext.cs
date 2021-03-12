@@ -16,7 +16,7 @@ namespace Library.Infrastructure
 
         public LibraryContext(DbContextOptions<LibraryContext> options) : base(options)
         {
-            => optionsBuilder.UseNpgsql("Host=localhost;Database=library_db;Username=root;Password=root");
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

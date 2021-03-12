@@ -15,6 +15,28 @@ namespace Library.Infrastructure.Config
             builder
                 .Property(a => a.LastName)
                 .IsRequired();
+
+            builder
+                .HasData(
+                    new Author
+                    {
+                        Id = 1,
+                        FirstName = "John",
+                        LastName = "Doe"
+                    },
+                    new Author
+                    {
+                        Id = 2,
+                        FirstName = "Captain",
+                        LastName = "Morgan"
+                    },
+                    new Author
+                    {
+                        Id = 3,
+                        FirstName = "Rick",
+                        LastName = "Sanchez"
+                    }
+                 );
         }
     }
 }
