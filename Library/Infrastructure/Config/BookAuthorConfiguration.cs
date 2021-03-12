@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Library.Infrastructure.Config
 {
-    public class BooksAuthorsConfiguration : IEntityTypeConfiguration<BooksAuthors>
+    public class BookAuthorConfiguration : IEntityTypeConfiguration<BookAuthor>
     {
-        public void Configure(EntityTypeBuilder<BooksAuthors> builder)
+        public void Configure(EntityTypeBuilder<BookAuthor> builder)
         {
             builder
              .HasKey(t => new { t.BookId, t.AuthorId});
@@ -28,32 +28,32 @@ namespace Library.Infrastructure.Config
 
             builder
                 .HasData(
-                    new BooksAuthors
+                    new BookAuthor
                     {
                         BookId = 1,
                         AuthorId = 1
                     },
-                    new BooksAuthors
+                    new BookAuthor
                     {
                         BookId = 2,
                         AuthorId = 1
                     },
-                    new BooksAuthors
+                    new BookAuthor
                     {
                         BookId = 3,
                         AuthorId = 1
                     },
-                    new BooksAuthors
+                    new BookAuthor
                     {
                         BookId = 3,
                         AuthorId = 2
                     },
-                    new BooksAuthors
+                    new BookAuthor
                     {
                         BookId = 4,
                         AuthorId = 3
                     },
-                    new BooksAuthors
+                    new BookAuthor
                     {
                         BookId = 5,
                         AuthorId = 3

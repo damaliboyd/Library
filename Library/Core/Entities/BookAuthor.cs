@@ -1,6 +1,6 @@
 ﻿namespace Library.Core.Entities
 {
-    public class BooksAuthors
+    public class BookAuthor
     {
         public int BookId { get; set; }
         public Book Book { get; set; }

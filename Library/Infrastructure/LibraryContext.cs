@@ -24,7 +24,7 @@ namespace Library.Infrastructure
             modelBuilder.ApplyConfiguration(new BookConfiguration());
             modelBuilder.ApplyConfiguration(new AuthorConfiguration());
             modelBuilder.ApplyConfiguration(new ReviewConfiguration());
-            modelBuilder.ApplyConfiguration(new BooksAuthorsConfiguration());
+            modelBuilder.ApplyConfiguration(new BookAuthorConfiguration());
         }
     }
 }
