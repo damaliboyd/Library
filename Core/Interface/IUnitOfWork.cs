@@ -1,7 +1,6 @@
-﻿using Library.Core.Entities;
-using Library.Infrastructure.Repository;
+﻿using Core.Entities;
 
-namespace Library.Core.Common
+namespace Core.Interface
 {
     public interface IUnitOfWork
     {
