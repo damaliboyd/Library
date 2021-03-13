@@ -20,6 +20,7 @@ namespace Infrastructure.Repository
             var books = context.Books
                 .Include(books => books.BooksAuthors)
                 .ThenInclude(bookauthor => bookauthor.Author)
+                .Include(books => books.Reviews)
                 .ToList();
             return books;
         }
@@ -27,6 +28,7 @@ namespace Infrastructure.Repository
         public Book GetBookAndReviews(int id)
         {
             var book = context.Books
+                .Where(books => books.Id == id)
                 .Include(books => books.BooksAuthors)
                 .ThenInclude(booksauthors => booksauthors.Author)
                 .Include(books => books.Reviews)

@@ -29,9 +29,10 @@ namespace Web.Controllers
 
         // GET api/<BooksController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Book Get(int id)
         {
-            return "value";
+            var book = BookRepository.GetBookAndReviews(id);
+            return book;
         }
 
         // POST api/<BooksController>
